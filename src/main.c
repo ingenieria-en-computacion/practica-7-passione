@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 void print_int(int value) {
-    printf("%d", value);
+    printf("%d ", value);
 }
 
 bool int_cmp(int a, int b) {
@@ -11,7 +11,7 @@ bool int_cmp(int a, int b) {
 }
 
 void print_char(char value) {
-    printf("%c", value);
+    printf("%c ", value);
 }
 
 bool char_cmp(char a, char b) {
@@ -23,9 +23,10 @@ int main() {
     list_int_append(nums, 10);
     list_int_append(nums, 20);
     
-    printf("Lista: ");
-    list_int_print(nums, print_int); // Usar función concreta para evitar errores
-    
+    printf("Lista de enteros: ");
+    list_int_print(nums, print_int);
+    printf("\n");
+
     list_int_destroy(nums);
     
     List_char *chars = list_char_create();
@@ -35,8 +36,9 @@ int main() {
     list_char_append(chars, 'd');
     list_char_append(chars, 'e');
 
-    printf("Lista: ");
+    printf("Lista de caracteres: ");
     list_char_print(chars, print_char);
+    printf("\n");
 
     list_char_destroy(chars);
     return 0;
