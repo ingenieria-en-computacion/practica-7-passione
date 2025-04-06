@@ -4,14 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Funciones para imprimir y comparar enteros
+// Funciones para imprimir enteros
 void print_int(int value) {
     printf("%d ", value);
 }
 
 int main() {
     // Crear y usar una lista ligada de enteros
-    List_int* nums = list_int_create(); 
+    List_int* nums = list_int_create();
     int* num1 = malloc(sizeof(int));
     *num1 = 10;
     list_int_append(nums, num1);
